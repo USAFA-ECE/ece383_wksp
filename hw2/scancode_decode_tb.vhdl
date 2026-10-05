@@ -27,13 +27,13 @@ END scancodeDecode_tb;
 ARCHITECTURE behavior OF scancodeDecode_tb IS 
  
     -- Component Declaration for the Unit Under Test (UUT)
-    COMPONENT scancodeDecode
-		port(	d:	in std_logic_vector(7 downto 0); 
-				h: out std_logic_vector(3 downto 0));
+    COMPONENT scancode_decoder
+		port(	scancode:	in std_logic_vector(7 downto 0); 
+				decoded_value: out std_logic_vector(3 downto 0));
     END COMPONENT;
  
- 	signal uutInput: std_logic_vector(7 downto 0);
-	signal uutOutput: std_logic_vector(3 downto 0);	
+ 	signal w_scancode: std_logic_vector(7 downto 0);
+	signal w_decoded_value: std_logic_vector(3 downto 0);	
 	
 	CONSTANT	TEST_ELEMENTS:integer:=10;
 	SUBTYPE INPUT is -- something goes here
@@ -52,9 +52,9 @@ BEGIN
 	-------------------------------------------
 	-- Instantiate the Unit Under Test (UUT)
 	-------------------------------------------
-   uut: scancodeDecode PORT MAP (
-		d=>uutInput,
-		h=>uutOutput);
+   uut: scancode_decoder PORT MAP (
+		scancode=> -- something goes here
+		decoded_value=> -- something goes here);
 			
 
 	process

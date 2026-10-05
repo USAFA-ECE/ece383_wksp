@@ -21,15 +21,15 @@
 library IEEE;		
 use IEEE.std_logic_1164.all; 
 
-entity scancodeDecode is
-	port(	d:	in std_logic_vector(7 downto 0); 
-			h: out std_logic_vector(3 downto 0));
-end scancodeDecode;
+entity scancode_decoder is
+	port(	scancode:	in std_logic_vector(7 downto 0); 
+			decoded_value: out std_logic_vector(3 downto 0));
+end scancode_decoder;
 
-architecture structure of scancodeDecode is
+architecture structure of scancode_decoder is
 
 begin
 
-	h <=	-- use a when statement to implement
+	decoded_value <=	-- use a when statement to implement
 	
 end structure;
